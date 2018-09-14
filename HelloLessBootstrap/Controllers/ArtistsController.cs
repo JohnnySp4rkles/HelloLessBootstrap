@@ -40,7 +40,8 @@ namespace HelloLessBootstrap.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("Error");
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Artist artist = db.Artists.Find(id);
             Console.Write("Output: {0}", artist);

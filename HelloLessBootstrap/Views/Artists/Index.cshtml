@@ -4,11 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Artists</h2>
 
-<p>
+<a href="@Url.Action("Create", new { @class = "btn btn-warning" })"><span class="glyphicon glyphicon-plus-sign"></span> Create New</a>
+
+
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -20,21 +23,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AlbumID)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ArtistID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ArtistID }) |
-            @Html.ActionLink("Extra Details", "ExtraDetails", new { id = item.ArtistID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ArtistID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlbumID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ArtistID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ArtistID }) |
+                @Html.ActionLink("Extra Details", "ExtraDetails", new { id = item.ArtistID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ArtistID })
+            </td>
+        </tr>
+    }
 
 </table>
