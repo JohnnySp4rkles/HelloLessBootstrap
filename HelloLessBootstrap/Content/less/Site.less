@@ -1,0 +1,61 @@
+﻿@import "../bootstrap/variables.less";
+@import "../bootstrap/grid.less";
+@import "../bootstrap/utilities.less";
+@import "../bootstrap/mixins.less";
+@import "../bootstrap/forms.less";
+@import "../bootstrap/navbar.less";
+@import "../bootstrap/jumbotron.less";
+@import "../bootstrap/buttons.less";
+@import "../bootstrap/responsive-utilities.less";
+
+body{
+    padding-top:50px;
+    padding-bottom:20px;
+}
+
+.body-content{
+    padding-left: 15px;
+    padding-right:15px;
+}
+.dl-horizontal dt{
+    white-space:normal;
+}
+
+input, select, textarea{
+    max-width:280px;
+}
+
+nav{
+    .nav-divider;
+    .navbar-inverse;
+    .navbar-fixed-top;
+    > div{
+        .container;
+    }
+}
+
+section.main{
+    .container;
+    .body-content;
+}
+
+article.artist-overview{
+    .row;
+    img{
+        .make-md-column(2);
+        .hidden-xs;
+        .hidden-sm;
+    }
+    div{
+        .make-md-column(10);
+    }
+}
+
+section.banner{
+    .jumbotron;
+    a{
+        .btn;
+        .btn-primary;
+        .btn-lg;
+    }
+}
